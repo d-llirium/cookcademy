@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct Recipe
+struct Recipe: Identifiable
 {
+    var id = UUID()
+    
     var mainInformation: MainInformation
     var ingredients: [ Ingredient ]
     var directions: [ Direction ]
@@ -45,6 +47,8 @@ struct MainInformation
     var author: String
     var category: Category
     
+    // since it conforms to CaseIterable, you can get all of the cases by using .allcases.
+    // .rawValue = String
     enum Category: String, CaseIterable
     {
         case breakfast = "Breakfast"
@@ -62,6 +66,7 @@ struct Ingredient
     
     var description: String
     {
+        // eturning a formatted String from a Double. The %g String Format Specifier suppresses any trailing zeros. If you had "1.10000", it would turn your number to "1.1". This functionality allows you to guarantee that the numbers are printed in a readable way. https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Strings/Articles/formatSpecifiers.html
         let formattedQuantity = String(
             format: "%g",
             quantity
@@ -74,13 +79,15 @@ struct Ingredient
         default:
             if quantity == 1
             {
-                return "1 \(unit.singularName) \(name)"
+                return "1 \(unit.singularName) \(name)" // drops the last char , S
             } else {
                 return "\(formattedQuantity) \(unit.rawValue) \(name)"
             }
         }
     }
     
+    // since it conforms to CaseIterable, you can get all of the cases by using .allcases.
+    // .rawValue = String
     enum Unit: String, CaseIterable
     {
         case oz = "Ounces"
@@ -93,6 +100,7 @@ struct Ingredient
         var singularName: String
         {
             String(
+                // dropLast dorps the last char on the String
                 rawValue.dropLast()
             )
         }
