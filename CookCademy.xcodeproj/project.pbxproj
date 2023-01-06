@@ -11,6 +11,8 @@
 		CEB675992967700700E6E9C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675982967700700E6E9C0 /* ContentView.swift */; };
 		CEB6759B2967700900E6E9C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB6759A2967700900E6E9C0 /* Assets.xcassets */; };
 		CEB6759E2967700900E6E9C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB6759D2967700900E6E9C0 /* Preview Assets.xcassets */; };
+		CEB675A5296770D500E6E9C0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675A4296770D500E6E9C0 /* Recipe.swift */; };
+		CEB675A72967757E00E6E9C0 /* Recipe+AllRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675A62967757E00E6E9C0 /* Recipe+AllRecipes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CEB675982967700700E6E9C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEB6759A2967700900E6E9C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB6759D2967700900E6E9C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEB675A4296770D500E6E9C0 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		CEB675A62967757E00E6E9C0 /* Recipe+AllRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+AllRecipes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,9 @@
 		CEB675952967700700E6E9C0 /* CookCademy */ = {
 			isa = PBXGroup;
 			children = (
+				CEB675C32968C6D700E6E9C0 /* ViewModels */,
+				CEB675C42968C6E500E6E9C0 /* Views */,
+				CEB675C22968C6C600E6E9C0 /* Models */,
 				CEB675962967700700E6E9C0 /* CookCademyApp.swift */,
 				CEB675982967700700E6E9C0 /* ContentView.swift */,
 				CEB6759A2967700900E6E9C0 /* Assets.xcassets */,
@@ -65,6 +72,29 @@
 				CEB6759D2967700900E6E9C0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEB675C22968C6C600E6E9C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEB675A4296770D500E6E9C0 /* Recipe.swift */,
+				CEB675A62967757E00E6E9C0 /* Recipe+AllRecipes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEB675C32968C6D700E6E9C0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEB675C42968C6E500E6E9C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB675A5296770D500E6E9C0 /* Recipe.swift in Sources */,
 				CEB675992967700700E6E9C0 /* ContentView.swift in Sources */,
 				CEB675972967700700E6E9C0 /* CookCademyApp.swift in Sources */,
+				CEB675A72967757E00E6E9C0 /* Recipe+AllRecipes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
