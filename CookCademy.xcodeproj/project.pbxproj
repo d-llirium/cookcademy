@@ -14,6 +14,7 @@
 		CEB675A5296770D500E6E9C0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675A4296770D500E6E9C0 /* Recipe.swift */; };
 		CEB675A72967757E00E6E9C0 /* Recipe+TestRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675A62967757E00E6E9C0 /* Recipe+TestRecipes.swift */; };
 		CEB675C62968C85E00E6E9C0 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675C52968C85E00E6E9C0 /* RecipeData.swift */; };
+		CEB675D4296CAF9600E6E9C0 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675D3296CAF9600E6E9C0 /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CEB675A4296770D500E6E9C0 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		CEB675A62967757E00E6E9C0 /* Recipe+TestRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+TestRecipes.swift"; sourceTree = "<group>"; };
 		CEB675C52968C85E00E6E9C0 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		CEB675D3296CAF9600E6E9C0 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,8 @@
 				CEB675C32968C6D700E6E9C0 /* ViewModels */,
 				CEB675C42968C6E500E6E9C0 /* Views */,
 				CEB675C22968C6C600E6E9C0 /* Models */,
-				CEB675962967700700E6E9C0 /* CookCademyApp.swift */,
 				CEB6759A2967700900E6E9C0 /* Assets.xcassets */,
+				CEB675962967700700E6E9C0 /* CookCademyApp.swift */,
 				CEB6759C2967700900E6E9C0 /* Preview Content */,
 			);
 			path = CookCademy;
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB675982967700700E6E9C0 /* RecipesListView.swift */,
+				CEB675D3296CAF9600E6E9C0 /* RecipeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB675A5296770D500E6E9C0 /* Recipe.swift in Sources */,
+				CEB675D4296CAF9600E6E9C0 /* RecipeDetailView.swift in Sources */,
 				CEB675992967700700E6E9C0 /* RecipesListView.swift in Sources */,
 				CEB675C62968C85E00E6E9C0 /* RecipeData.swift in Sources */,
 				CEB675972967700700E6E9C0 /* CookCademyApp.swift in Sources */,

@@ -9,7 +9,11 @@ import SwiftUI
 
 struct RecipesListView: View
 {
-    // Add the @StateObject wrapper so that the view updates when the model changes, so it has access to the ViewModel changes
+    /*
+     Add the @StateObject wrapper
+     so that the view updates when the model changes,
+     so it has access to the ViewModel changes
+     */
     @StateObject var recipeData = RecipeData()
     
     var body: some View
@@ -17,14 +21,36 @@ struct RecipesListView: View
         List
         {
             ForEach(
-                recipeData.recipes
+                recipes
             ) { recipe in
-                Text(
-                    recipe.mainInformation.name
+                /*
+                 NavigationLink now connects the
+                 RecipeListView to the RecipeDetailView.
+                 */
+                NavigationLink(
+                    // name of the recipe is listed
+                    recipe.mainInformation.name,
+                    // destination Detail View
+                    destination: RecipeDetailView(
+                        recipe: recipe
+                    )
                 )
             }
         }
-        .navigationTitle("All Recipes")
+        .navigationTitle(navigationTitle)
+    }
+}
+
+extension RecipesListView
+{
+    var recipes: [ Recipe ]
+    {
+        recipeData.recipes
+    }
+    
+    var navigationTitle: String
+    {
+        "All Recipes"
     }
 }
 
