@@ -15,6 +15,7 @@
 		CEB675A72967757E00E6E9C0 /* Recipe+TestRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675A62967757E00E6E9C0 /* Recipe+TestRecipes.swift */; };
 		CEB675C62968C85E00E6E9C0 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675C52968C85E00E6E9C0 /* RecipeData.swift */; };
 		CEB675D4296CAF9600E6E9C0 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675D3296CAF9600E6E9C0 /* RecipeDetailView.swift */; };
+		CEB675D6296CB95A00E6E9C0 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB675D5296CB95A00E6E9C0 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CEB675A62967757E00E6E9C0 /* Recipe+TestRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+TestRecipes.swift"; sourceTree = "<group>"; };
 		CEB675C52968C85E00E6E9C0 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		CEB675D3296CAF9600E6E9C0 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		CEB675D5296CB95A00E6E9C0 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB675C52968C85E00E6E9C0 /* RecipeData.swift */,
+				CEB675D5296CB95A00E6E9C0 /* AppColor.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				CEB675A5296770D500E6E9C0 /* Recipe.swift in Sources */,
 				CEB675D4296CAF9600E6E9C0 /* RecipeDetailView.swift in Sources */,
 				CEB675992967700700E6E9C0 /* RecipesListView.swift in Sources */,
+				CEB675D6296CB95A00E6E9C0 /* AppColor.swift in Sources */,
 				CEB675C62968C85E00E6E9C0 /* RecipeData.swift in Sources */,
 				CEB675972967700700E6E9C0 /* CookCademyApp.swift in Sources */,
 				CEB675A72967757E00E6E9C0 /* Recipe+TestRecipes.swift in Sources */,

@@ -16,42 +16,30 @@ struct RecipesListView: View
      */
     @StateObject var recipeData = RecipeData()
     
+    private let listBackgroundColor = AppColor.background
+    private let listTextColor = AppColor.foreground
+    
     var body: some View
     {
         List
         {
-            ForEach(
-                recipes
+            ForEach( recipes
             ) { recipe in
-                /*
-                 NavigationLink now connects the
-                 RecipeListView to the RecipeDetailView.
-                 */
-                NavigationLink(
-                    // name of the recipe is listed
-                    recipe.mainInformation.name,
-                    // destination Detail View
-                    destination: RecipeDetailView(
-                        recipe: recipe
-                    )
+                NavigationLink( // NavigationLink now connects the RecipeListView to the RecipeDetailView.
+                    recipe.mainInformation.name,// name of the recipe is listed
+                    destination: RecipeDetailView(  recipe: recipe ) // destination Detail View
                 )
-            }
-        }
-        .navigationTitle(navigationTitle)
+            }.listRowBackground( listBackgroundColor )
+                .foregroundColor( listTextColor )
+        }.navigationTitle( navigationTitle )
     }
 }
 
 extension RecipesListView
 {
-    var recipes: [ Recipe ]
-    {
-        recipeData.recipes
-    }
+    var recipes: [ Recipe ] { recipeData.recipes }
     
-    var navigationTitle: String
-    {
-        "All Recipes"
-    }
+    var navigationTitle: String { "All Recipes" }
 }
 
 struct ContentView_Previews: PreviewProvider
