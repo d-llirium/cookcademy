@@ -11,6 +11,8 @@
 		CEDF2AB62A31253600A0753F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF2AB52A31253600A0753F /* ContentView.swift */; };
 		CEDF2AB82A31253900A0753F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDF2AB72A31253900A0753F /* Assets.xcassets */; };
 		CEDF2ABB2A31253900A0753F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDF2ABA2A31253900A0753F /* Preview Assets.xcassets */; };
+		CEDF2AC22A31262000A0753F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF2AC12A31262000A0753F /* Recipe.swift */; };
+		CEDF2AC42A31299300A0753F /* Recipe + Mockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF2AC32A31299300A0753F /* Recipe + Mockup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CEDF2AB52A31253600A0753F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEDF2AB72A31253900A0753F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEDF2ABA2A31253900A0753F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEDF2AC12A31262000A0753F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		CEDF2AC32A31299300A0753F /* Recipe + Mockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe + Mockup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				CEDF2AB52A31253600A0753F /* ContentView.swift */,
 				CEDF2AB72A31253900A0753F /* Assets.xcassets */,
 				CEDF2AB92A31253900A0753F /* Preview Content */,
+				CEDF2AC12A31262000A0753F /* Recipe.swift */,
+				CEDF2AC32A31299300A0753F /* Recipe + Mockup.swift */,
 			);
 			path = Cookcademy;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDF2AC22A31262000A0753F /* Recipe.swift in Sources */,
 				CEDF2AB62A31253600A0753F /* ContentView.swift in Sources */,
+				CEDF2AC42A31299300A0753F /* Recipe + Mockup.swift in Sources */,
 				CEDF2AB42A31253600A0753F /* CookcademyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
