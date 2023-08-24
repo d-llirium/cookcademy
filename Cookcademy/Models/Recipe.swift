@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Recipe {
+struct Recipe: Identifiable {
+    var id = UUID() // creates a universally unique value that can be used to identify types, interfaces, and other items
+    
     var mainInformation: MainInformation
     var ingredients: [Ingredient]
     var directions: [Direction]

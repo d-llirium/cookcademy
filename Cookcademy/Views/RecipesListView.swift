@@ -8,17 +8,38 @@
 import SwiftUI
 
 struct RecipesListView: View {
+    
+    @StateObject var recipeData = RecipeData() // updates view when the ViewModel changes
+    
+    private let listBackgroundColor = AppColor.background
+    private let listTextColor = AppColor.foreground
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack{
+            List {
+                ForEach( recipes ) { recipe in
+                    NavigationLink(
+                        recipe.mainInformation.name,
+                        destination: RecipeDetailView(recipe: recipe)
+                    )
+                }
+                .listRowBackground(listBackgroundColor)
+                .foregroundColor(listTextColor)
+            }
+            .navigationTitle(navigationTitle)
         }
-        .padding()
     }
 }
 
+
+extension RecipesListView {
+    var recipes: [Recipe] {
+        recipeData.recipes
+    }
+    var navigationTitle: String {
+        "All Recipes"
+    }
+}
 struct RecipesListView_Previews: PreviewProvider {
     static var previews: some View {
         RecipesListView()
