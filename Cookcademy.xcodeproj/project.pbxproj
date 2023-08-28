@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE26A23C2A9D34DB00E54653 /* RecipeCategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE26A23B2A9D34DB00E54653 /* RecipeCategoryGridView.swift */; };
 		CE70AF692A97DDA800949985 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70AF682A97DDA800949985 /* RecipeDetailView.swift */; };
 		CE70AF6B2A97E10700949985 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70AF6A2A97E10700949985 /* AppColor.swift */; };
 		CEC450642A97B6CD000E3FC9 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC450632A97B6CD000E3FC9 /* RecipeData.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE26A23B2A9D34DB00E54653 /* RecipeCategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryGridView.swift; sourceTree = "<group>"; };
 		CE70AF682A97DDA800949985 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		CE70AF6A2A97E10700949985 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		CEC450632A97B6CD000E3FC9 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				CEDF2AB52A31253600A0753F /* RecipesListView.swift */,
 				CE70AF682A97DDA800949985 /* RecipeDetailView.swift */,
+				CE26A23B2A9D34DB00E54653 /* RecipeCategoryGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				CE70AF6B2A97E10700949985 /* AppColor.swift in Sources */,
 				CEC450642A97B6CD000E3FC9 /* RecipeData.swift in Sources */,
 				CEDF2AC42A31299300A0753F /* Recipe + Mockup.swift in Sources */,
+				CE26A23C2A9D34DB00E54653 /* RecipeCategoryGridView.swift in Sources */,
 				CEDF2AB42A31253600A0753F /* CookcademyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
