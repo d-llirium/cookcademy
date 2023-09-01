@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct RecipeCategoryGridView: View {
-    private var recipeData = RecipeData()
+    @StateObject private var recipeData = RecipeData() // @StateObject. RecipesCategoryGridView will maintain the state of recipeData and pass recipeData as an environmentObject to the other views
     
     var body: some View {
+        let columns = [GridItem(), GridItem()]
         NavigationView {
-            let columns = [GridItem(), GridItem()]
             ScrollView {
                 LazyVGrid(columns: columns, content: {
                     ForEach(MainInformation.Category.allCases,
                             id: \.self) { category in
-                        CategoryView(category: category)
+                        NavigationLink (
+                            destination: RecipesListView(category: category)
+                                .environmentObject(recipeData)
+                        ) { // RecipeCategoryGridView now navigates to RecipesListView by using a NavigationLink
+                            CategoryView(category: category)
+                        }
                     }
                 })
                 .navigationTitle("Categories")
@@ -30,6 +35,7 @@ struct CategoryView: View {
     let category: MainInformation.Category
     
     var body: some View {
+        // The ZStack is refactored into a new structure, CategoryView. Then, CategoryView is instantiated for every category within the ForEach.
         ZStack {
             Image(category.rawValue)
                 .resizable()

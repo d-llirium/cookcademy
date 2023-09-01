@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct RecipesListView: View {
-    
-    @StateObject var recipeData = RecipeData() // updates view when the ViewModel changes
+    // MARK: - EnvironmentObject
+    @EnvironmentObject private var recipeData: RecipeData // By passing an object through the environment, the current view and any children views can access that object
+    // RecipeCategoryGridView will hold now hold the recipeData object. Since RecipesListView will be a child view, RecipesListView will access that data through the environment using the @EnvironmentObject property wrapper
+    let category: MainInformation.Category // to display that the grid will pass in
     
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
@@ -33,15 +35,18 @@ struct RecipesListView: View {
 
 
 extension RecipesListView {
-    var recipes: [Recipe] {
-        recipeData.recipes
+    private var recipes: [Recipe] {
+        recipeData.recipes(for: category)
     }
-    var navigationTitle: String {
-        "All Recipes"
+    private var navigationTitle: String {
+        "\(category.rawValue) Recipes"
     }
 }
 struct RecipesListView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipesListView()
+        NavigationView {
+            RecipesListView(category: .breakfast)
+                .environmentObject( RecipeData() )
+        }
     }
 }

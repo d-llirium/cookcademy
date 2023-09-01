@@ -56,9 +56,9 @@
 		CEC450612A97B39A000E3FC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE26A23B2A9D34DB00E54653 /* RecipeCategoryGridView.swift */,
 				CEDF2AB52A31253600A0753F /* RecipesListView.swift */,
 				CE70AF682A97DDA800949985 /* RecipeDetailView.swift */,
-				CE26A23B2A9D34DB00E54653 /* RecipeCategoryGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
