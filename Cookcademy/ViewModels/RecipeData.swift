@@ -19,4 +19,9 @@ class RecipeData: ObservableObject { // monitors @Published var chagnges
         }
         return filteredRecipes
     }
+    func add(_ recipe: Recipe) {
+        if recipe.isValid {
+            recipes.append(recipe)
+        }
+    }
 }
