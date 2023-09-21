@@ -13,6 +13,9 @@ struct RecipesListView: View {
     // RecipeCategoryGridView will hold now hold the recipeData object. Since RecipesListView will be a child view, RecipesListView will access that data through the environment using the @EnvironmentObject property wrapper
     let category: MainInformation.Category // to display that the grid will pass in
     
+    @State private var isPresenting = false
+    @State private var newRecipe = Recipe()
+    
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
     
@@ -29,6 +32,34 @@ struct RecipesListView: View {
                 .foregroundColor(listTextColor)
             }
             .navigationTitle(navigationTitle)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        isPresenting = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $isPresenting) {
+                NavigationView {
+                    ModifyRecipeView(recipe: $newRecipe)
+                        .toolbar(content: {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Dismiss") {
+                                    isPresenting = false
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Add") {
+                                    recipeData.recipes.append(newRecipe)
+                                    isPresenting = false
+                                }
+                            }
+                        })
+                        .navigationTitle("Add a New Recipe")
+                }
+            }
         }
     }
 }
