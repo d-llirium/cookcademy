@@ -47,6 +47,17 @@ struct MainInformation {
         case dinner = "Dinner"
         case dessert = "Dessert"
     }
+    
+    init(name: String, description: String, author: String, category: Category) {
+        self.name = name
+        self.description = description
+        self.author = author
+        self.category = category
+    }
+    
+    init() {
+        self.init(name: "", description: "", author: "", category: .breakfast)
+    }
 }
 struct Ingredient {
     var name:String
